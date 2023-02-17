@@ -31,6 +31,9 @@ a {
 nav a {
 	margin-right: 10px;
 }
+nav a:last-child {
+  margin-right: 0;
+}
 textarea {
 	width: 100%;
 	font-size: 16px;
