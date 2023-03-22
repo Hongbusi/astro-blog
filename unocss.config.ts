@@ -41,14 +41,14 @@ export default defineConfig({
   theme: {
     colors: {
       c: {
-        'bg': '#fafafa',
-        'bg-dark': '#050505',
-        'text': '#232323',
-        'text-dark': '#f3f3f3',
-        'text-secondary': '#686868',
-        'text-secondary-dark': '#888',
-        'border': '#eee',
-        'border-dark': '#222',
+        bg: '#fafafa',
+        bgDark: '#050505',
+        text: '#232323',
+        textDark: '#f3f3f3',
+        textSecondary: '#686868',
+        textSecondaryDark: '#888',
+        border: '#eee',
+        borderDark: '#222',
       },
     },
   },
