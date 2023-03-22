@@ -6,18 +6,20 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "dependencies": {
-    "@astrojs/rss": "^2.1.0",
-    "@astrojs/sitemap": "^1.0.1",
-    "@unocss/reset": "^0.50.6",
-    "astro": "^2.0.10",
-    "unocss": "^0.50.6"
+    "@unocss/reset": "^0.50.6"
   },
   "devDependencies": {
     "@antfu/eslint-config-ts": "^0.37.0",
+    "@astrojs/rss": "^2.1.0",
+    "@astrojs/sitemap": "^1.0.1",
     "@iconify/utils": "^2.1.5",
-    "eslint": "^8.36.0"
+    "astro": "^2.0.10",
+    "eslint": "^8.36.0",
+    "unocss": "^0.50.6"
   }
 }
