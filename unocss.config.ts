@@ -2,34 +2,53 @@ import {
   defineConfig,
   presetAttributify,
   presetIcons,
+  presetTypography,
   presetUno,
+  presetWebFonts,
   transformerDirectives,
   transformerVariantGroup,
 } from 'unocss'
+import { FileSystemIconLoader } from '@iconify/utils/lib/loader/node-loaders'
 
 export default defineConfig({
   shortcuts: {
-    'bg-base': 'bg-$c-bg',
-    'bg-card': 'bg-$c-bg-card',
-    'text-base': 'text-$c-text',
-    'text-secondary': 'text-$c-text-secondary',
-    'border-base': 'border border-$c-border',
+    'bg-base': 'bg-c-bg dark:bg-c-bg-dark',
+    'text-base': 'text-c-text dark:text-c-text-dark',
+    'text-secondary': 'text-c-text-secondary dark:text-c-text-secondary-dark',
+    'border-base': 'border border-c-border dark:border-c-border-dark',
   },
   presets: [
     presetUno(),
     presetAttributify,
+    presetTypography(),
     presetIcons({
+      prefix: '',
       scale: 1.2,
       extraProperties: {
         display: 'inline-block',
+      },
+      collections: {
+        i: FileSystemIconLoader('./src/assets/icons'),
+      },
+    }),
+    presetWebFonts({
+      fonts: {
+        sans: 'Inter:400,600,800',
+        mono: 'DM Mono',
       },
     }),
   ],
   theme: {
     colors: {
-      primary: {
-        DEFAULT: 'var(--c-primary)',
-        active: 'var(--c-primary-active)',
+      c: {
+        'bg': '#fafafa',
+        'bg-dark': '#050505',
+        'text': '#232323',
+        'text-dark': '#f3f3f3',
+        'text-secondary': '#686868',
+        'text-secondary-dark': '#888',
+        'border': '#eee',
+        'border-dark': '#222',
       },
     },
   },
